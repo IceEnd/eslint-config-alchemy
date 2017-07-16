@@ -3,6 +3,6 @@ module.exports = {
     node: true
   },
   extends: [
-    __dirname + '/rules/best-practices.js'
-  ]
+    './rules/best-practices.js'
+  ].map(require.resolve)
 }
