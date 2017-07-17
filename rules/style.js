@@ -1,0 +1,410 @@
+/**
+*  代码风格相关规则
+*/
+module.exports = {
+  rules: {
+    // 强制在数组的头尾括号之前执行换行
+    'array-bracket-spacing': ['error', 'never'],
+
+    // 强制在数组括号内执行一致的间隔
+    'array-bracket-spacing': ['error', 'never'],
+
+    // 强制在每个数组元素之后执行换行符
+    'array-element-newline': ['error', 'never'],
+
+    // 强制在单行块内实施一致的间距
+    'block-spacing': ['error', 'never'],
+
+    // 强制块的括号风格统一
+    'brace-style': ['error', '1tbs', { allowSingleLine: true }],
+
+    // 强制驼峰命名
+    camelcase: ['error', { properties: 'never' }],
+
+    // 强制或禁止注释的第一个字母大写
+    // http://eslint.org/docs/rules/capitalized-comments
+    'capitalized-comments': ['off', 'never', {
+      line: {
+        ignorePattern: '.*',
+        ignoreInlineComments: true,
+        ignoreConsecutiveComments: true,
+      },
+      block: {
+        ignorePattern: '.*',
+        ignoreInlineComments: true,
+        ignoreConsecutiveComments: true,
+      },
+    }],
+
+    // 逗号风格，换行时在行首还是行尾
+    'comma-dangle': ['error', 'always-multiline'],
+
+    // 强制逗号前后的空格
+    'comma-spacing': ['error', { before: false, after: true }],
+
+    // 块的括号风格统一
+    'comma-style': ['error', 'last'],
+
+    // 强制在计算属性括号内一致的间距
+    'computed-property-spacing': ['error', 'never'],
+
+    // 强制规定this别名
+    'consistent-this': 'off',
+
+    // 强制添加或禁止在文件末尾的换行
+    'eol-last': ['error', 'always'],
+
+    // 强制添加或禁止在函数标识符与其调用之间的间距
+    // http://eslint.org/docs/rules/func-call-spacing
+    'func-call-spacing': ['error', 'never'],
+
+    // 要求函数名称与其分配到的变量或属性的名称相匹配
+    // http://eslint.org/docs/rules/func-name-matching
+    'func-name-matching': ['off', 'always', {
+      includeCommonJSModuleExports: false
+    }],
+
+    // 强制添加或禁止命名函数表达式
+    // http://eslint.org/docs/rules/func-names
+    'func-names': 'warn',
+
+    // 强制统一使用函数声明或表达式
+    // http://eslint.org/docs/rules/func-style
+    // TODO: enable
+    'func-style': ['off', 'expression'],
+
+    // 禁止指定的标识符
+    // http://eslint.org/docs/rules/id-blacklist
+    'id-blacklist': 'off',
+
+    // 强制标识符长度最小和最大值
+    'id-length': 'off',
+
+    // 要求标识符与指定的正则表达式匹配
+    'id-match': 'off',
+
+    // 强制统一的缩进
+    indent: ['error', 2, {
+      SwitchCase: 1,
+      VariableDeclarator: 1,
+      outerIIFEBody: 1,
+      // MemberExpression: null,
+      // CallExpression: {
+        // parameters: null,
+      // },
+      FunctionDeclaration: {
+        parameters: 1,
+        body: 1
+      },
+      FunctionExpression: {
+        parameters: 1,
+        body: 1
+      }
+    }],
+
+    // 强制在JSX属性中一致地使用双引号或单引号
+    'jsx-quotes': ['off', 'prefer-double'],
+
+    // 强制在对象文字属性中强制实现键和值之间的一致间距
+    'key-spacing': ['error', { beforeColon: false, afterColon: true }],
+
+    // 强制在关键字前后执行一致的间距
+    'keyword-spacing': ['error', {
+      before: true,
+      after: true,
+      overrides: {
+        return: { after: true },
+        throw: { after: true },
+        case: { after: true }
+      }
+    }],
+
+    // 强制规定注释的位置
+    // http://eslint.org/docs/rules/line-comment-position
+    // TODO: enable?
+    'line-comment-position': ['off', {
+      position: 'above',
+      ignorePattern: '',
+      applyDefaultPatterns: true,
+    }],
+
+    // 强制换行风格
+    // http://eslint.org/docs/rules/linebreak-style
+    'linebreak-style': ['error', 'unix'],
+
+    // 强制注释前后空行
+    'lines-around-comment': 'off',
+
+    // 强制嵌套的最大深度
+    'max-depth': ['off', 4],
+
+    // 强制一行的最大长度
+    // http://eslint.org/docs/rules/max-len
+    'max-len': 'off',
+
+    // 强制最大行数
+    // http://eslint.org/docs/rules/max-lines
+    'max-lines': 'off',
+
+    // 强制回调函数最大嵌套深度
+    'max-nested-callbacks': 'off',
+
+    // 强制函数定义中最多允许的参数数量
+    'max-params': 'off',
+
+    // 强制函数块最多允许的的语句数量
+    'max-statements': 'off',
+
+    // 强制每一行中所允许的最大语句数量
+    // http://eslint.org/docs/rules/max-statements-per-line
+    'max-statements-per-line': 'off',
+
+    // 强制三元表达式换行
+    // http://eslint.org/docs/rules/multiline-ternary
+    // TODO: enable?
+    'multiline-ternary': ['off', 'never'],
+
+    // 要求构造函数首字母大写
+    'new-cap': ['error', {
+      newIsCap: true,
+      newIsCapExceptions: [],
+      capIsNew: false,
+      capIsNewExceptions: ['Immutable.Map', 'Immutable.Set', 'Immutable.List'],
+    }],
+
+    // 要求调用无参构造函数时有圆括号
+    // http://eslint.org/docs/rules/new-parens
+    'new-parens': 'error',
+
+    // 要求方法链中每个调用都有一个换行符
+    'newline-per-chained-call': 'off',
+
+    // 禁用 Array 构造函数
+    'no-array-constructor': 'off',
+
+    // allow/disallow an empty newline after var statement
+    'newline-after-var': 'off',
+
+    // http://eslint.org/docs/rules/newline-before-return
+    'newline-before-return': 'off',
+
+    // enforces new line after each method call in the chain to make it
+    // more readable and easy to maintain
+    // http://eslint.org/docs/rules/newline-per-chained-call
+    'newline-per-chained-call': ['error', { ignoreChainWithDepth: 4 }],
+
+    // disallow use of the Array constructor
+    'no-array-constructor': 'error',
+
+    // disallow use of bitwise operators
+    // http://eslint.org/docs/rules/no-bitwise
+    'no-bitwise': 'error',
+
+    // disallow use of the continue statement
+    // http://eslint.org/docs/rules/no-continue
+    'no-continue': 'error',
+
+    // disallow comments inline after code
+    'no-inline-comments': 'off',
+
+    // disallow if as the only statement in an else block
+    // http://eslint.org/docs/rules/no-lonely-if
+    'no-lonely-if': 'error',
+
+    // disallow un-paren'd mixes of different operators
+    // http://eslint.org/docs/rules/no-mixed-operators
+    'no-mixed-operators': ['error', {
+      groups: [
+        ['+', '-', '*', '/', '%', '**'],
+        ['&', '|', '^', '~', '<<', '>>', '>>>'],
+        ['==', '!=', '===', '!==', '>', '>=', '<', '<='],
+        ['&&', '||'],
+        ['in', 'instanceof']
+      ],
+      allowSamePrecedence: false
+    }],
+
+    // disallow mixed spaces and tabs for indentation
+    'no-mixed-spaces-and-tabs': 'error',
+
+    // disallow use of chained assignment expressions
+    // http://eslint.org/docs/rules/no-multi-assign
+    'no-multi-assign': ['error'],
+
+    // disallow multiple empty lines and only one newline at the end
+    'no-multiple-empty-lines': ['error', { max: 2, maxEOF: 1 }],
+
+    // disallow negated conditions
+    // http://eslint.org/docs/rules/no-negated-condition
+    'no-negated-condition': 'off',
+
+    // disallow nested ternary expressions
+    'no-nested-ternary': 'error',
+
+    // disallow use of the Object constructor
+    'no-new-object': 'error',
+
+    // disallow use of unary operators, ++ and --
+    // http://eslint.org/docs/rules/no-plusplus
+    'no-plusplus': 'error',
+
+    // disallow certain syntax forms
+    // http://eslint.org/docs/rules/no-restricted-syntax
+    'no-restricted-syntax': [
+      'error',
+      {
+        selector: 'ForInStatement',
+        message: 'for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array.',
+      },
+      {
+        selector: 'ForOfStatement',
+        message: 'iterators/generators require regenerator-runtime, which is too heavyweight for this guide to allow them. Separately, loops should be avoided in favor of array iterations.',
+      },
+      {
+        selector: 'LabeledStatement',
+        message: 'Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.',
+      },
+      {
+        selector: 'WithStatement',
+        message: '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.',
+      },
+    ],
+
+    // disallow space between function identifier and application
+    'no-spaced-func': 'error',
+
+    // disallow tab characters entirely
+    'no-tabs': 'error',
+
+    // disallow the use of ternary operators
+    'no-ternary': 'off',
+
+    // disallow trailing whitespace at the end of lines
+    'no-trailing-spaces': 'error',
+
+    // disallow dangling underscores in identifiers
+    'no-underscore-dangle': ['error', { allowAfterThis: false }],
+
+    // disallow the use of Boolean literals in conditional expressions
+    // also, prefer `a || b` over `a ? a : b`
+    // http://eslint.org/docs/rules/no-unneeded-ternary
+    'no-unneeded-ternary': ['error', { defaultAssignment: false }],
+
+    // disallow whitespace before properties
+    // http://eslint.org/docs/rules/no-whitespace-before-property
+    'no-whitespace-before-property': 'error',
+
+    // enforce the location of single-line statements
+    // http://eslint.org/docs/rules/nonblock-statement-body-position
+    'nonblock-statement-body-position': 'off',
+
+    // require padding inside curly braces
+    'object-curly-spacing': ['error', 'always'],
+
+    // enforce line breaks between braces
+    // http://eslint.org/docs/rules/object-curly-newline
+    // TODO: enable once https://github.com/eslint/eslint/issues/6488 is resolved
+    'object-curly-newline': ['off', {
+      ObjectExpression: { minProperties: 0, multiline: true },
+      ObjectPattern: { minProperties: 0, multiline: true }
+    }],
+
+    // enforce "same line" or "multiple line" on object properties.
+    // http://eslint.org/docs/rules/object-property-newline
+    'object-property-newline': ['error', {
+      allowMultiplePropertiesPerLine: true,
+    }],
+
+    // allow just one var statement per function
+    'one-var': ['error', 'never'],
+
+    // require a newline around variable declaration
+    // http://eslint.org/docs/rules/one-var-declaration-per-line
+    'one-var-declaration-per-line': ['error', 'always'],
+
+    // require assignment operator shorthand where possible or prohibit it entirely
+    // http://eslint.org/docs/rules/operator-assignment
+    'operator-assignment': ['error', 'always'],
+
+    // enforce operators to be placed before or after line breaks
+    'operator-linebreak': 'off',
+
+    // enforce padding within blocks
+    'padded-blocks': ['error', 'never'],
+
+    // require quotes around object literal property names
+    // http://eslint.org/docs/rules/quote-props.html
+    'quote-props': ['error', 'as-needed', { keywords: false, unnecessary: true, numbers: false }],
+
+    // specify whether double or single quotes should be used
+    quotes: ['error', 'single', { avoidEscape: true }],
+
+    // do not require jsdoc
+    // http://eslint.org/docs/rules/require-jsdoc
+    'require-jsdoc': 'off',
+
+    // require or disallow use of semicolons instead of ASI
+    semi: ['error', 'always'],
+
+    // enforce spacing before and after semicolons
+    'semi-spacing': ['error', { before: false, after: true }],
+
+    // requires object keys to be sorted
+    'sort-keys': ['off', 'asc', { caseSensitive: false, natural: true }],
+
+    // sort variables within the same declaration block
+    'sort-vars': 'off',
+
+    // require or disallow space before blocks
+    'space-before-blocks': 'error',
+
+    // require or disallow space before function opening parenthesis
+    // http://eslint.org/docs/rules/space-before-function-paren
+    'space-before-function-paren': ['error', {
+      anonymous: 'always',
+      named: 'never',
+      asyncArrow: 'always'
+    }],
+
+    // require or disallow spaces inside parentheses
+    'space-in-parens': ['error', 'never'],
+
+    // require spaces around operators
+    'space-infix-ops': 'error',
+
+    // Require or disallow spaces before/after unary operators
+    // http://eslint.org/docs/rules/space-unary-ops
+    'space-unary-ops': ['error', {
+      words: true,
+      nonwords: false,
+      overrides: {
+      },
+    }],
+
+    // require or disallow a space immediately following the // or /* in a comment
+    // http://eslint.org/docs/rules/spaced-comment
+    'spaced-comment': ['error', 'always', {
+      line: {
+        exceptions: ['-', '+'],
+        markers: ['=', '!'], // space here to support sprockets directives
+      },
+      block: {
+        exceptions: ['-', '+'],
+        markers: ['=', '!'], // space here to support sprockets directives
+        balanced: false,
+      }
+    }],
+
+    // Require or disallow spacing between template tags and their literals
+    // http://eslint.org/docs/rules/template-tag-spacing
+    // TODO: enable, semver-major
+    'template-tag-spacing': ['off', 'never'],
+
+    // require or disallow the Unicode Byte Order Mark
+    // http://eslint.org/docs/rules/unicode-bom
+    'unicode-bom': ['error', 'never'],
+
+    // require regex literals to be wrapped in parentheses
+    'wrap-regex': 'off'
+  }
+};
