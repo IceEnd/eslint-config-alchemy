@@ -156,19 +156,7 @@ module.exports = {
 
     // 禁止对 function 的参数进行重新赋值
     // rule: http://eslint.org/docs/rules/no-param-reassign.html
-    'no-param-reassign': ['error', {
-      props: true,
-      ignorePropertyModificationsFor: [
-        'acc', // for reduce accumulators
-        'e', // for e.returnvalue
-        'ctx', // for Koa routing
-        'req', // for Express requests
-        'request', // for Express requests
-        'res', // for Express responses
-        'response', // for Express responses
-        '$scope', // for Angular 1 scopes
-      ]
-    }],
+    'no-param-reassign': ['error', { 'props': false }],
 
     // 禁用 __proto__ 属性
     'no-proto': 'error',
@@ -278,4 +266,4 @@ module.exports = {
     // 要求或禁止 “Yoda” 条件
     yoda: 'error'
   }
-}
+};

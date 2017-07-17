@@ -3,6 +3,10 @@ module.exports = {
     node: true
   },
   extends: [
-    './rules/best-practices.js'
+    './rules/errors.js',
+    './rules/node.js',
+    './rules/practices.js',
+    './rules/strict.js',
+    './rules/variales.js'
   ].map(require.resolve)
 }
