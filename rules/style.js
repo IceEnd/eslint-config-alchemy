@@ -182,36 +182,22 @@ module.exports = {
     // 禁用 Array 构造函数
     'no-array-constructor': 'off',
 
-    // allow/disallow an empty newline after var statement
-    'newline-after-var': 'off',
-
-    // http://eslint.org/docs/rules/newline-before-return
-    'newline-before-return': 'off',
-
-    // enforces new line after each method call in the chain to make it
-    // more readable and easy to maintain
-    // http://eslint.org/docs/rules/newline-per-chained-call
-    'newline-per-chained-call': ['error', { ignoreChainWithDepth: 4 }],
-
-    // disallow use of the Array constructor
-    'no-array-constructor': 'error',
-
-    // disallow use of bitwise operators
-    // http://eslint.org/docs/rules/no-bitwise
+    // 禁用按位运算符
+    // http://eslint.org/docs/rules/no-bitwiseå
     'no-bitwise': 'error',
 
-    // disallow use of the continue statement
+    // 禁用 continue 语句
     // http://eslint.org/docs/rules/no-continue
     'no-continue': 'error',
 
-    // disallow comments inline after code
+    // 禁止在代码后使用内联注释
     'no-inline-comments': 'off',
 
-    // disallow if as the only statement in an else block
+    // 禁止 if 作为唯一的语句出现在 else 语句中
     // http://eslint.org/docs/rules/no-lonely-if
     'no-lonely-if': 'error',
 
-    // disallow un-paren'd mixes of different operators
+    // 禁止混合使用不同的操作符
     // http://eslint.org/docs/rules/no-mixed-operators
     'no-mixed-operators': ['error', {
       groups: [
@@ -224,31 +210,31 @@ module.exports = {
       allowSamePrecedence: false
     }],
 
-    // disallow mixed spaces and tabs for indentation
+    // 禁止空格和 tab 的混合缩进
     'no-mixed-spaces-and-tabs': 'error',
 
-    // disallow use of chained assignment expressions
+    // 禁止使用链式赋值表达式
     // http://eslint.org/docs/rules/no-multi-assign
     'no-multi-assign': ['error'],
 
-    // disallow multiple empty lines and only one newline at the end
+    // 禁止出现多行空行
     'no-multiple-empty-lines': ['error', { max: 2, maxEOF: 1 }],
 
-    // disallow negated conditions
+    // 禁用否定的表达式
     // http://eslint.org/docs/rules/no-negated-condition
     'no-negated-condition': 'off',
 
-    // disallow nested ternary expressions
+    // 禁用嵌套的三元表达式
     'no-nested-ternary': 'error',
 
-    // disallow use of the Object constructor
+    // 禁用 Object 的构造函数
     'no-new-object': 'error',
 
-    // disallow use of unary operators, ++ and --
+    // 禁用一元操作符 ++ 和 --
     // http://eslint.org/docs/rules/no-plusplus
-    'no-plusplus': 'error',
+    'no-plusplus': 'off',
 
-    // disallow certain syntax forms
+    // 禁用特定的语法
     // http://eslint.org/docs/rules/no-restricted-syntax
     'no-restricted-syntax': [
       'error',
@@ -270,38 +256,31 @@ module.exports = {
       },
     ],
 
-    // disallow space between function identifier and application
-    'no-spaced-func': 'error',
-
-    // disallow tab characters entirely
+    // 禁止所有tabs
     'no-tabs': 'error',
 
-    // disallow the use of ternary operators
+    // 禁止使用三元表达式
     'no-ternary': 'off',
 
-    // disallow trailing whitespace at the end of lines
+    // 禁用行尾空格
     'no-trailing-spaces': 'error',
 
-    // disallow dangling underscores in identifiers
+    // 禁止标识符中有悬空下划线
     'no-underscore-dangle': ['error', { allowAfterThis: false }],
 
-    // disallow the use of Boolean literals in conditional expressions
-    // also, prefer `a || b` over `a ? a : b`
+    // 禁止可以在有更简单的可替代的表达式时使用三元操作符
     // http://eslint.org/docs/rules/no-unneeded-ternary
     'no-unneeded-ternary': ['error', { defaultAssignment: false }],
 
-    // disallow whitespace before properties
+    // 禁止属性前有空白
     // http://eslint.org/docs/rules/no-whitespace-before-property
     'no-whitespace-before-property': 'error',
 
-    // enforce the location of single-line statements
+    // 强制单行声明的位置
     // http://eslint.org/docs/rules/nonblock-statement-body-position
     'nonblock-statement-body-position': 'off',
 
-    // require padding inside curly braces
-    'object-curly-spacing': ['error', 'always'],
-
-    // enforce line breaks between braces
+    // 强制大括号内换行符的一致性
     // http://eslint.org/docs/rules/object-curly-newline
     // TODO: enable once https://github.com/eslint/eslint/issues/6488 is resolved
     'object-curly-newline': ['off', {
@@ -309,56 +288,65 @@ module.exports = {
       ObjectPattern: { minProperties: 0, multiline: true }
     }],
 
-    // enforce "same line" or "multiple line" on object properties.
+    // 强制在大括号中使用一致的空格
+    'object-curly-spacing': ['error', 'always'],
+
+    // 强制将对象属性放在不同的行上
     // http://eslint.org/docs/rules/object-property-newline
     'object-property-newline': ['error', {
       allowMultiplePropertiesPerLine: true,
     }],
 
-    // allow just one var statement per function
+    // 强制变量在函数中一起声明或单独声明
     'one-var': ['error', 'never'],
 
-    // require a newline around variable declaration
+    // 强制单行声明的位置
     // http://eslint.org/docs/rules/one-var-declaration-per-line
     'one-var-declaration-per-line': ['error', 'always'],
 
-    // require assignment operator shorthand where possible or prohibit it entirely
+    // 在可能的情况下强制或禁止赋值运算符的简写
     // http://eslint.org/docs/rules/operator-assignment
     'operator-assignment': ['error', 'always'],
 
-    // enforce operators to be placed before or after line breaks
+    // 强制连接符统一的换行
     'operator-linebreak': 'off',
 
-    // enforce padding within blocks
+    // 强制或禁止在块内填充空格
     'padded-blocks': ['error', 'never'],
 
-    // require quotes around object literal property names
+    // 强制或禁止在语句之间填充空格
+    'padding-line-between-statements': 'off',
+
+    // 强制对象字面量中的属性名双引号
     // http://eslint.org/docs/rules/quote-props.html
     'quote-props': ['error', 'as-needed', { keywords: false, unnecessary: true, numbers: false }],
 
-    // specify whether double or single quotes should be used
+    // s强制统一使用反引号，双引号或单引号
     quotes: ['error', 'single', { avoidEscape: true }],
 
-    // do not require jsdoc
+    // 需要JSDoc 注释
     // http://eslint.org/docs/rules/require-jsdoc
     'require-jsdoc': 'off',
 
-    // require or disallow use of semicolons instead of ASI
+    // 强制语句分号结尾
     semi: ['error', 'always'],
 
-    // enforce spacing before and after semicolons
+    // 强制分号前后空格
     'semi-spacing': ['error', { before: false, after: true }],
 
-    // requires object keys to be sorted
+    // 要求对象键进行排序
     'sort-keys': ['off', 'asc', { caseSensitive: false, natural: true }],
 
-    // sort variables within the same declaration block
+    // 强制分号位置
+    'semi-style': 'off',
+
+    // 要求同一声明块中的变量进行排序
     'sort-vars': 'off',
 
-    // require or disallow space before blocks
+    // 强制块区域内统一的间隔
     'space-before-blocks': 'error',
 
-    // require or disallow space before function opening parenthesis
+    // 强制在Function括号之前执行统一的间距
     // http://eslint.org/docs/rules/space-before-function-paren
     'space-before-function-paren': ['error', {
       anonymous: 'always',
@@ -366,13 +354,13 @@ module.exports = {
       asyncArrow: 'always'
     }],
 
-    // require or disallow spaces inside parentheses
+    // 强制在括号内用统一的间距
     'space-in-parens': ['error', 'never'],
 
-    // require spaces around operators
+    // 中缀操作符周围需要有空格
     'space-infix-ops': 'error',
 
-    // Require or disallow spaces before/after unary operators
+    // 强制在一元操作员之前或之后有统一的间距
     // http://eslint.org/docs/rules/space-unary-ops
     'space-unary-ops': ['error', {
       words: true,
@@ -381,7 +369,7 @@ module.exports = {
       },
     }],
 
-    // require or disallow a space immediately following the // or /* in a comment
+    //强制在注释中的//或/ *之后用统一的间距
     // http://eslint.org/docs/rules/spaced-comment
     'spaced-comment': ['error', 'always', {
       line: {
@@ -395,16 +383,19 @@ module.exports = {
       }
     }],
 
-    // Require or disallow spacing between template tags and their literals
+    // 在switch语句的冒号附近加间隔
+    'switch-colon-spacing': 'off',
+
+    // 强制或禁止模板标签与其文字之间的间距
     // http://eslint.org/docs/rules/template-tag-spacing
     // TODO: enable, semver-major
     'template-tag-spacing': ['off', 'never'],
 
-    // require or disallow the Unicode Byte Order Mark
+    // 强制或禁止Unicode字节顺序标记（BOM）
     // http://eslint.org/docs/rules/unicode-bom
     'unicode-bom': ['error', 'never'],
 
-    // require regex literals to be wrapped in parentheses
+    // 正则表达式字面量用小括号包起来
     'wrap-regex': 'off'
   }
 };
