@@ -1,5 +1,5 @@
 module.exports = {
-  relus: {
+  rules: {
     // for循环 需要往正确的方向循环,避免死循环
     'for-direction': 'error',
 

@@ -2,7 +2,7 @@
 *  变量声明相关规则
 */
 module.exports = {
-  relus: {
+  rules: {
     // 要求或禁止 var 声明中的初始化
     'init-declarations': 'off',
 

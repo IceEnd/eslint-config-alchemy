@@ -6,7 +6,7 @@ module.exports = {
     node: true
   },
 
-  relus: {
+  rules: {
     // 避免多次调用回调
     'callback-return': 'off',
 
