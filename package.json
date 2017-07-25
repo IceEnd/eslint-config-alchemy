@@ -9,8 +9,12 @@
   "keywords": [
     "eslint"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IceEnd/eslint-config-alchemy"
+  },
   "author": "IceEnd",
-  "license": "ISC",
+  "license": "MIT",
   "peerDependencies": {
     "eslint": "^4.2.0",
     "eslint-plugin-jsx-a11y": "^6.0.0",

@@ -8,6 +8,7 @@ module.exports = {
     './rules/node.js',
     './rules/practices.js',
     './rules/strict.js',
+    './rules/style.js',
     './rules/variales.js'
   ].map(require.resolve)
-}
+};
