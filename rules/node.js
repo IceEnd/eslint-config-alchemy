@@ -17,7 +17,7 @@ module.exports = {
     'handle-callback-err': 'off',
 
     // 禁止使用Buffer()构造函数
-    'no-buffer-constructor': 'error',
+    'no-buffer-constructor': 'off',
 
     // 禁止使用Buffer()构造函数
     'no-mixed-requires': ['off', false],

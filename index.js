@@ -9,6 +9,9 @@ module.exports = {
     './rules/practices.js',
     './rules/strict.js',
     './rules/style.js',
-    './rules/variales.js'
+    './rules/variales.js',
+    './rules/react-a11y.js',
+    './rules/react.js',
+    './rules/imports.js',
   ].map(require.resolve)
 };

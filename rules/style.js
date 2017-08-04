@@ -10,7 +10,7 @@ module.exports = {
     'array-bracket-spacing': ['error', 'never'],
 
     // 强制在每个数组元素之后执行换行符
-    'array-element-newline': ['error', 'never'],
+    'array-element-newline': ['off', { multiline: true, minItems: 3 }],
 
     // 强制在单行块内实施一致的间距
     'block-spacing': ['error', 'never'],

@@ -1,7 +1,7 @@
 module.exports = {
   rules: {
     // for循环 需要往正确的方向循环,避免死循环
-    'for-direction': 'error',
+    'for-direction': 'off',
 
     // 禁止循环中有 await
     'no-await-in-loop': 'error',

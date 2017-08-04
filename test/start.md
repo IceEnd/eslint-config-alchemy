@@ -46,3 +46,7 @@ ESLint 支持几种格式的配置文件：
 - embertest - Ember 测试全局变量。
 - webextensions - WebExtensions 全局变量。
 - greasemonkey - GreaseMonkey 全局变量。
+
+```JavaScript
+
+```
