@@ -66,7 +66,7 @@ module.exports = {
 
     // 强制添加或禁止命名函数表达式
     // http://eslint.org/docs/rules/func-names
-    'func-names': 'warn',
+    'func-names': 'off',
 
     // 强制统一使用函数声明或表达式
     // http://eslint.org/docs/rules/func-style
