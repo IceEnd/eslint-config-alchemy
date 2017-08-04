@@ -1,9 +1,10 @@
 {
   "name": "eslint-config-alchemy",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "ESLint规则配置",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint test",
     "fix": "eslint --fix test/index.js",
     "test": "eslint test"
   },
