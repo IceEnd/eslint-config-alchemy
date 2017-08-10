@@ -257,7 +257,7 @@ module.exports = {
     ],
 
     // 禁止所有tabs
-    'no-tabs': 'error',
+    'no-tabs': 'off',
 
     // 禁止使用三元表达式
     'no-ternary': 'off',
