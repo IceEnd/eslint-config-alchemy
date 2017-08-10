@@ -38,7 +38,7 @@ module.exports = {
     eqeqeq: ['error', 'always', { null: 'ignore' }],
 
     // 要求 for-in 循环中有一个 if 语句
-    'guard-for-in': 'error',
+    'guard-for-in': 'off',
 
     // disallow the use of alert, confirm, and prompt
     'no-alert': 'warn',
