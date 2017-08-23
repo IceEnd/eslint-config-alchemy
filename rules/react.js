@@ -124,7 +124,7 @@ module.exports = {
 
     // Prevent usage of dangerous JSX properties
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-danger.md
-    'react/no-danger': 'warn',
+    'react/no-danger': 'off',
 
     // Prevent usage of deprecated methods
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-deprecated.md
