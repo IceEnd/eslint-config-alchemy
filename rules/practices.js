@@ -12,9 +12,7 @@ module.exports = {
 
     // 强制该类方法利用 this,
     // http://eslint.org/docs/rules/class-methods-use-this
-    'class-methods-use-this': ['error', {
-      exceptMethods: [],
-    }],
+    'class-methods-use-this': 'off',
 
     // 强制设置一个循环的最大值
     complexity: ['off', 11],
