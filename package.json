@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-alchemy",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "ESLint规则配置",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,7 @@
     "type": "git",
     "url": "https://github.com/IceEnd/eslint-config-alchemy"
   },
-  "author": "IceEnd",
+  "author": "Alchemy",
   "license": "MIT",
   "devDependencies": {
     "eslint": "^4.2.0",
