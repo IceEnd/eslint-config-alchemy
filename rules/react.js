@@ -207,10 +207,13 @@ module.exports = {
     // Prevent missing parentheses around multilines JSX
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-wrap-multilines.md
     'react/jsx-wrap-multilines': ['error', {
-      declaration: true,
-      assignment: true,
-      return: true,
-      arrow: true,
+      "declaration": "parens",
+      "assignment": "parens",
+      "return": "parens",
+      "arrow": "parens",
+      "condition": "ignore",
+      "logical": "ignore",
+      "prop": "ignore"
     }],
 
     // Require that the first prop in a JSX element be on a new line when the element is multiline
