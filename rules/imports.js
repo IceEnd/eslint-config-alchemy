@@ -13,13 +13,10 @@ module.exports = {
   settings: {
     'import/resolver': {
       node: {
-        extensions: ['.js', '.json']
+        extensions: ['.js', '.json', '.jsx', '.vue']
       }
     },
-    'import/extensions': [
-      '.js',
-      '.jsx',
-    ],
+    'import/extensions': ['.js', '.jsx', '.json', '.vue'],
     'import/core-modules': [
     ],
     'import/ignore': [
