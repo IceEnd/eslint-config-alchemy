@@ -145,11 +145,7 @@ module.exports = {
 
     // media elements must have captions
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/media-has-caption.md
-    'jsx-a11y/media-has-caption': ['error', {
-      audio: [],
-      video: [],
-      track: [],
-    }],
+    'jsx-a11y/media-has-caption': 'off',
 
     // WAI-ARIA roles should not be used to convert an interactive element to non-interactive
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-interactive-element-to-noninteractive-role.md
