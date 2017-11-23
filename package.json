@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-alchemy",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "ESLint规则配置",
   "main": "index.js",
   "scripts": {
